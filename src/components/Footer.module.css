@@ -1,0 +1,146 @@
+.footer {
+  background: var(--bg-dark);
+  color: var(--meowth-cream);
+  padding: 4rem 2rem 2rem;
+  border-top: 3px solid var(--meowth-gold);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(245, 230, 211, 0.2);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.coin {
+  font-size: 2rem;
+}
+
+.title {
+  background: linear-gradient(135deg, var(--meowth-gold) 0%, var(--meowth-gold-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tagline {
+  color: rgba(245, 230, 211, 0.8);
+  line-height: 1.6;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.links h4 {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--meowth-gold);
+  margin-bottom: 0.5rem;
+}
+
+.links a {
+  color: rgba(245, 230, 211, 0.8);
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.links a:hover {
+  color: var(--meowth-gold);
+  transform: translateX(5px);
+}
+
+.disclaimer {
+  background: rgba(255, 215, 0, 0.1);
+  border-left: 3px solid var(--meowth-gold);
+  padding: 2rem;
+  border-radius: var(--border-radius-sm);
+  margin-bottom: 2rem;
+}
+
+.disclaimer h5 {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--meowth-gold);
+  margin-bottom: 1rem;
+}
+
+.disclaimer p {
+  color: rgba(245, 230, 211, 0.8);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.disclaimer p:last-child {
+  margin-bottom: 0;
+}
+
+.build {
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(245, 230, 211, 0.2);
+  color: rgba(245, 230, 211, 0.6);
+  font-size: 0.875rem;
+}
+
+.powered {
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 1rem 1.5rem;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}

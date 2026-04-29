@@ -1,0 +1,317 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+  /* Background image opcional - puedes agregar tu propia imagen */
+  background-image: url('/assets/hero-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Sticky Meowth Face - SE QUEDA FIJO EN SCROLL */
+.stickyMeowth {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  pointer-events: none;
+  animation: subtleFloat 4s ease-in-out infinite;
+}
+
+.meowthFace {
+  display: block;
+  filter: drop-shadow(0 -8px 20px rgba(255, 215, 0, 0.4));
+}
+
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.content {
+  z-index: 10;
+}
+.badge {
+  display: inline-block;
+  background: var(--team-rocket-red);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-md);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.badgeText {
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 1rem;
+  color: var(--meowth-black);
+}
+
+.subtitle {
+  background: linear-gradient(135deg, var(--meowth-gold) 0%, var(--meowth-gold-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tagline {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--meowth-brown);
+}
+
+.highlight {
+  color: var(--eth-purple);
+  font-weight: 800;
+}
+
+.description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--meowth-brown);
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+.ctas {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.primaryBtn {
+  background: linear-gradient(135deg, var(--meowth-gold) 0%, var(--meowth-gold-dark) 100%);
+  color: var(--meowth-black);
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius-sm);
+  font-weight: 700;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-gold);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(255, 215, 0, 0.4);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.primaryBtn:hover .arrow {
+  transform: translateX(5px);
+}
+
+.secondaryBtn {
+  background: transparent;
+  border: 2px solid var(--meowth-gold);
+  color: var(--meowth-black);
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius-sm);
+  font-weight: 700;
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background: var(--meowth-gold);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-gold);
+}
+
+.catchphrase {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--meowth-brown);
+  opacity: 0.8;
+}
+
+.gold {
+  color: var(--meowth-gold-dark);
+  font-weight: 700;
+}
+
+.meowthContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.meowthHero {
+  filter: drop-shadow(0 10px 40px rgba(139, 115, 85, 0.3));
+  animation: float 3s ease-in-out infinite;
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+}
+
+.coins {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.coinFloat {
+  position: absolute;
+  font-size: 3rem;
+  animation: coinFloat 4s ease-in-out infinite;
+}
+
+.coinFloat:nth-child(1) {
+  top: 10%;
+  left: 20%;
+}
+
+.coinFloat:nth-child(2) {
+  top: 30%;
+  right: 15%;
+}
+
+.coinFloat:nth-child(3) {
+  bottom: 20%;
+  left: 10%;
+}
+
+.coinFloat:nth-child(4) {
+  top: 50%;
+  left: 5%;
+}
+
+.coinFloat:nth-child(5) {
+  bottom: 30%;
+  right: 20%;
+}
+
+@keyframes coinFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50px) rotate(180deg);
+    opacity: 0.7;
+  }
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--meowth-brown);
+  font-weight: 600;
+  font-size: 0.875rem;
+  animation: float 2s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+.scrollIndicator span:first-child {
+  font-size: 2rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .meowthContainer {
+    order: -1;
+  }
+  
+  .meowthHero {
+    max-width: 400px;
+  }
+  
+  .title {
+    font-size: 3.5rem;
+  }
+  
+  .stickyMeowth {
+    left: 1rem;
+    width: 80px;
+    height: 80px;
+  }
+  
+  .meowthFace {
+    width: 80px !important;
+    height: 80px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 6rem 1rem 2rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .tagline {
+    font-size: 1.25rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
+  
+  .ctas {
+    flex-direction: column;
+  }
+  
+  .meowthHero {
+    max-width: 300px;
+  }
+  
+  .coinFloat {
+    font-size: 2rem;
+  }
+  
+  .stickyMeowth {
+    display: none; /* Hide on mobile para no bloquear contenido */
+  }
+}

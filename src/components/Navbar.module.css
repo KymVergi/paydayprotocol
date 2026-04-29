@@ -1,0 +1,143 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--border-color);
+  padding: 1rem 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--meowth-black);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Logo Image */
+.logoImage {
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(255, 215, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logoImage {
+  transform: rotate(10deg);
+}
+
+.title {
+  background: linear-gradient(135deg, var(--meowth-gold) 0%, var(--meowth-gold-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: var(--font-heading), sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link {
+  color: var(--meowth-brown);
+  font-weight: 600;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.link:hover {
+  color: var(--meowth-gold-dark);
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--meowth-gold);
+  transition: width 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.connectBtn,
+.walletBtn {
+  background: linear-gradient(135deg, var(--meowth-gold) 0%, var(--meowth-gold-dark) 100%);
+  color: var(--meowth-black);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-sm);
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-gold);
+}
+
+.connectBtn:hover,
+.walletBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(255, 215, 0, 0.4);
+}
+
+.connectBtn:active,
+.walletBtn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    gap: 1rem;
+  }
+  
+  .link {
+    display: none;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  .logoImage {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .logoImage {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  
+  .title {
+    font-size: 1rem;
+  }
+}
