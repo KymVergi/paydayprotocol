@@ -40,7 +40,7 @@ export function Footer() {
 
           <div className={styles.links}>
             <h4>Run With The Crew</h4>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://twitter.com/payday_protocol" target="_blank" rel="noopener noreferrer">
               X / Twitter
             </a>
             <a href="https://t.me" target="_blank" rel="noopener noreferrer">
