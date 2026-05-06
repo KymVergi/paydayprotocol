@@ -47,7 +47,7 @@ export function Hero() {
             </a>
             
             <a 
-              href={`https://etherscan.io/token/${process.env.NEXT_PUBLIC_CONTRACT_ADDRESS}`}
+              href={`https://basescan.org/token/${process.env.NEXT_PUBLIC_CONTRACT_ADDRESS}`}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.secondaryBtn}
