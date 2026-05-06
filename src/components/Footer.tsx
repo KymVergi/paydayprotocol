@@ -23,14 +23,14 @@ export function Footer() {
           <div className={styles.links}>
             <h4>The Paperwork</h4>
             <a 
-              href={`https://etherscan.io/token/${contractAddress}`}
+              href={`https://basescan.org/token/${contractAddress}`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Contract on Etherscan
+              Contract on Basescan
             </a>
             <a 
-              href={`https://dexscreener.com/ethereum/${contractAddress}`}
+              href={`https://dexscreener.com/base/${contractAddress}`}
               target="_blank"
               rel="noopener noreferrer"
             >
